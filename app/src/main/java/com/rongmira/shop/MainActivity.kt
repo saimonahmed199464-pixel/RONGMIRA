@@ -1,3 +1,4 @@
+
 package com.rongmira.shop
 
 import android.os.Bundle
@@ -26,6 +27,7 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun RongmiraApp() {
     val products = listOf(
@@ -36,7 +38,7 @@ fun RongmiraApp() {
         Product("ফেস ক্রিম", "৳৫৫০")
     )
 
-    var cart by remember { mutableStateOf(0) }
+    var cart by remember { mutableIntStateOf(0) }
 
     MaterialTheme {
         Scaffold(
@@ -58,9 +60,16 @@ fun RongmiraApp() {
 
                 Spacer(modifier = Modifier.height(12.dp))
 
-                Text("আমাদের পণ্যসমূহ")
+                Text(
+                    text = "আমাদের পণ্যসমূহ",
+                    style = MaterialTheme.typography.titleLarge
+                )
 
-                LazyColumn {
+                Spacer(modifier = Modifier.height(8.dp))
+
+                LazyColumn(
+                    modifier = Modifier.weight(1f)
+                ) {
                     items(products) { product ->
                         Card(
                             modifier = Modifier
@@ -79,7 +88,9 @@ fun RongmiraApp() {
                                     Text(product.price)
                                 }
 
-                                Button(onClick = { cart++ }) {
+                                Button(
+                                    onClick = { cart++ }
+                                ) {
                                     Text("কার্টে যোগ")
                                 }
                             }
@@ -87,9 +98,10 @@ fun RongmiraApp() {
                     }
                 }
 
-                Spacer(modifier = Modifier.height(12.dp))
-
-                Text("কার্টে পণ্য: $cart")
+                Text(
+                    text = "কার্টে পণ্য: $cart",
+                    style = MaterialTheme.typography.titleMedium
+                )
             }
         }
     }
