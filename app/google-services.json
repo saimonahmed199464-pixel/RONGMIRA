@@ -1,0 +1,39 @@
+{
+"project_info": {
+"project_number": "518826844586",
+"project_id": "rongmira-355a7",
+"storage_bucket": "rongmira-355a7.firebasestorage.app"
+},
+"client": [
+{
+"client_info": {
+"mobilesdk_app_id": "1:518826844586:android:9f5269f228148632aa8bd3",
+"android_client_info": {
+"package_name": "com.rongmira.shop"
+}
+},
+"oauth_client": [
+{
+"client_id": "518826844586-hpmjuh0sh52o25i65iq181ncrcn2g4q3.apps.googleusercontent.com",
+"client_type": 3
+}
+],
+"api_key": [
+{
+"current_key": "AIzaSyDnE5kWgsQGk1HvqfPiXbbNdHKZ_4vW_GA"
+}
+],
+"services": {
+"appinvite_service": {
+"other_platform_oauth_client": [
+{
+"client_id": "518826844586-hpmjuh0sh52o25i65iq181ncrcn2g4q3.apps.googleusercontent.com",
+"client_type": 3
+}
+]
+}
+}
+}
+],
+"configuration_version": "1"
+}
